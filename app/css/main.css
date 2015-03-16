@@ -25,9 +25,9 @@ md-sidenav.md-locked-open{
   min-width: 250px;
 }
 md-sidenav.md-sidenav-right{
-  width: 70%;
+  width: 60%;
   min-width: 250px;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 md-whiteframe{
@@ -55,9 +55,7 @@ md-checkbox{
   padding-right: 35%;
   padding-bottom: 5px;
   cursor: pointer;
-
 }
-
 .panel-default{
   border-color:rgb(0,150,136);
 }
@@ -89,10 +87,12 @@ md-checkbox{
   margin: 5px 5px 0 0px;
   min-height: 10px;
 }
-
+/*.CRUD{
+  margin-right: 3px;
+}*/
 .fa{
-  font-size: 1.3em;
-  margin-right: 5px !important;
+  /*font-size: 1.3em;*/
+  /*margin-right: 5px !important;*/
   cursor: pointer;
 }
 a.Matbar2:hover{
