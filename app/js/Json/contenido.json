@@ -39,6 +39,46 @@
 					  "fecha_vencimiento": "2014-09-16T05:00:00.000Z",
 					  "datetime_creacion": "2014-05-10T00:53:11.000Z",
 					  "datetime_modificacion": "0000-00-00 00:00:00"
+					},
+					{
+					  "id_indicador": 29,
+					  "Clase_numero": "4",
+					  "contenido": "El colombiano Carlos Bacca anotó dos goles y el Sevilla derrotó por 3-0 al Elche para reforzar su quinta posición en la liga española.",
+					  "periodo": "4",
+					  "estado": 0,
+					  "fecha_vencimiento": "2014-05-15T05:00:00.000Z",
+					  "datetime_creacion": "2014-05-10T00:52:20.000Z",
+					  "datetime_modificacion": "0000-00-00 00:00:00"
+					},
+					{
+					  "id_indicador": 30,
+					  "Clase_numero": "4",
+					  "contenido": "Bacca marcó a los 18 y 31 minutos para totalizar 16 tantos en el campeonato, donde figura como cuarto máximo anotador.",
+					  "periodo": "3",
+					  "estado": 0,
+					  "fecha_vencimiento": "2014-06-10T05:00:00.000Z",
+					  "datetime_creacion": "2014-05-10T00:52:43.000Z",
+					  "datetime_modificacion": "0000-00-00 00:00:00"
+					},
+					{
+					  "id_indicador": 31,
+					  "Clase_numero": "4",
+					  "contenido": "Hemos hecho un partido muy serio. El Elche estaba presionándonos bien. El penalti fue lo que desequilibró el partido.",
+					  "periodo": "2",
+					  "estado": 0,
+					  "fecha_vencimiento": "2014-09-16T05:00:00.000Z",
+					  "datetime_creacion": "2014-05-10T00:53:01.000Z",
+					  "datetime_modificacion": "0000-00-00 00:00:00"
+					},
+					{
+					  "id_indicador": 32,
+					  "Clase_numero": "4",
+					  "contenido": "Sabíamos que teníamos que jugar con intensidad”, dijo Bacca. “Sevilla cada vez está mejor. ",
+					  "periodo": "1",
+					  "estado": 0,
+					  "fecha_vencimiento": "2014-09-16T05:00:00.000Z",
+					  "datetime_creacion": "2014-05-10T00:53:11.000Z",
+					  "datetime_modificacion": "0000-00-00 00:00:00"
 					}
 				  ],
 

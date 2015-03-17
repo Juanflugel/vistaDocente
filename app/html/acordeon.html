@@ -1,29 +1,111 @@
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <!--  aqui comienza el repeater para los cada periodo en el scope periodos -->
- <div class="panel panel-default" ng-repeat="periodo in Periodos">
+  <div class="panel panel-default" ng-repeat="periodo in Periodos">
 
-   <div class="panel-heading" role="tab" id="headingOne" >
+     <div class="panel-heading" role="tab" id="headingOne" >
         <h4 class="panel-title">
            <span class="titulo" data-toggle="collapse" data-target="#{{periodo.targetid}}" aria-expanded="{{periodo.expanded}}" aria-controls="{{periodo.targetid}}" data-parent="#accordion">
-            {{periodo.periodo}}
-           </span>
-           <span class="pull-right">
-            <i class="fa fa-plus-square fa-lg" ng-click="toggleSidenav('right')"></i>        
-           </span>
-        </h4>
-    </div>
+              {{periodo.periodo}}
+          </span>
+          <span class="pull-right">
+              <i class="fa fa-plus-square fa-lg" ng-click="toggleSidenav('right')"></i>        
+          </span>
+      </h4>
+  </div>
 
-    <div id="{{periodo.targetid}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body">
-          <!-- aqui se filtra cada logro de acuerdo con su periodo que es una propiedad del scope Logros y periodo.id que es una propidad del escope Periodos -->
-          <p aling="justify" class="well well-sm"ng-repeat="x in Logros | filter:{periodo:periodo.id}">
-            <span>{{x.contenido}}&nbsp&nbsp&nbsp-<strong>{{x.fecha_vencimiento |date:format:timezone}}</strong>-</span>
-            <span class="pull-right CRUD">
-             <i class="fa fa-edit fa-lg" style="color:#00D63F;"></i>&nbsp&nbsp<i class="fa fa-close fa-lg" style="color:#E60013;"></i>
-            </span>
-          </p>
+  <div id="{{periodo.targetid}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <!-- aqui se filtra cada logro de acuerdo con su periodo que es una propiedad del scope Logros y periodo.id que es una propidad del escope Periodos -->
+        <div ng-repeat="x in Logros | filter:{periodo:periodo.id}">
+
+            <h5 aling="justify" class="well well-sm logro" style="cursor:pointer;">
+                <span data-toggle="collapse" data-target="#{{x.id_indicador}}" aria-expanded="false">
+                    {{x.contenido}}&nbsp&nbsp&nbsp
+                    -<strong>{{x.fecha_vencimiento |date:format:timezone}}</strong>-
+                </span>
+                <span class="pull-right CRUD">
+                    <i class="fa fa-edit fa-lg" style="color:#00D63F;"></i>&nbsp&nbsp<i class="fa fa-close fa-lg" style="color:#E60013;"></i>
+                </span>
+            </h5>
+
+            <div class="collapse" id="{{x.id_indicador}}">
+              <hr>
+              <div class="btn-group" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+                        <span class="visible-lg visible-md visible-sm">Agregar Evaluacion</span>
+                        <span class="visible-xs">+ Eval</span>
+                    </button>
+                </div>
+                <div class="btn-group" role="group">
+                   <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg">
+                    <span class="visible-lg visible-md visible-sm">Calificar Evaluación</span>
+                    <span class="visible-xs">+ Notas</span>
+                    </button>
+                </div>
+              </div>
+                <br><br><br>  <hr>
+            </div>
         </div>
-    </div>
+      </div>
+  </div>
  </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Agrega aquí la nueva evaluación</h4>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for=""> Tipo de Evaluación</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="">Valor Porcentual</label>
+              <input type="number" class="form-control">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for=""> Detalle</label>
+            <textarea class="form-control" name="" id="" cols="30" rows="4"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal largo -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Agrega aquí la Nota de cada Estudiante</h4>
+      </div>
+      <div class="modal-body">
+        juan <br>
+        lennin <br>
+        david <br>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

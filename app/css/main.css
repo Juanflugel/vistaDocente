@@ -1,6 +1,13 @@
 body{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+::-webkit-datetime-edit-year-field {
+  font-weight: bold;
+}
+hr {
+  margin-top: 10px !important; 
+  margin-bottom:10px !important;
+}
 h4{
   font-weight: bold;
 }
@@ -87,9 +94,7 @@ md-checkbox{
   margin: 5px 5px 0 0px;
   min-height: 10px;
 }
-/*.CRUD{
-  margin-right: 3px;
-}*/
+
 .fa{
   /*font-size: 1.3em;*/
   /*margin-right: 5px !important;*/

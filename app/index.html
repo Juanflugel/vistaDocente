@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body layout="row" ng-controller="soloDatosCtrl">
@@ -17,7 +20,12 @@
                 <strong>{{x.curso}}</strong><br>
                 <small>{{x.materia}}</small>
             </a>
+
+
         </md-content>
+
+
+
     </md-sidenav>
     <!-- este es el sidenav left abierto por defecto -->
 
@@ -50,17 +58,19 @@
 
     <!-- este es el sidenav right cerrado por defecto CRUD -->
     <md-sidenav class="md-sidenav-right md-whiteframe-z1" md-component-id="right">
-        <md-toolbar><div class="md-toolbar-tools"><span>Edita el logro </span></div> </md-toolbar>
+        <md-toolbar><div class="md-toolbar-tools"><span>Crea un Nuevo logro</span></div> </md-toolbar>
         <md-content layout="column" class="md-padding"> 
             <form>
+                <md-input-container>
+                    <label>Descripción del Logro</label>
+                    <textarea name="" ng-model="monda" columns="1"></textarea>
+                </md-input-container>
                 <md-input-container>
                     <label>Username</label>
                     <input type="text">
                 </md-input-container>
-                <md-input-container>
-                    <label>Description</label>
-                    <textarea name="" ng-model="monda" columns="1"></textarea>
-                </md-input-container>               
+               
+               
             </form> 
     </md-sidenav>
 <!-- este es el sidenav right cerrado por defecto CRUD -->
@@ -69,14 +79,11 @@
 
 
 
-
-
-
-
-
-
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
