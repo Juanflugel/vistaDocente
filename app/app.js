@@ -61,6 +61,8 @@ angular.module('CDapp',[
 	
 	$http.get('js/Json/contenido.json').success(function (data){
 		$scope.Logros = data.contenido;
+    $scope.Evaluaciones = data.calificaciones;
+    
 		console.log(data.calificaciones);
 		$scope.tabla = {
 			datos:data.calificaciones,

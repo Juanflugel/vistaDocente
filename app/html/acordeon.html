@@ -18,7 +18,7 @@
         <!-- aqui se filtra cada logro de acuerdo con su periodo que es una propiedad del scope Logros y periodo.id que es una propidad del escope Periodos -->
         <div ng-repeat="x in Logros | filter:{periodo:periodo.id}">
 
-            <h5 aling="justify" class="well well-sm logro" style="cursor:pointer;">
+            <p aling="justify" class="well well-sm logro" style="cursor:pointer;">
                 <span data-toggle="collapse" data-target="#{{x.id_indicador}}" aria-expanded="false">
                     {{x.contenido}}&nbsp&nbsp&nbsp
                     -<strong>{{x.fecha_vencimiento |date:format:timezone}}</strong>-
@@ -26,7 +26,7 @@
                 <span class="pull-right CRUD">
                     <i class="fa fa-edit fa-lg" style="color:#00D63F;"></i>&nbsp&nbsp<i class="fa fa-close fa-lg" style="color:#E60013;"></i>
                 </span>
-            </h5>
+            </p>
 
             <div class="collapse" id="{{x.id_indicador}}">
               <hr>
@@ -44,13 +44,30 @@
                     </button>
                 </div>
               </div>
-                <br><br><br>  <hr>
+<br>
+              <table class="table">
+                <thead>
+                  <tr>
+                  <th></th><th> Aqui van todas las evaluciones falta mejorar el formato pero  ya funciona el filtro</th><th>peso</th>
+                </tr>
+              </thead>
+                <br>
+                <tbody>
+                  <tr ng-repeat="examen in Evaluaciones | filter:{id_indicador:x.id_indicador}">
+                    <td><input type="checkbox"></td>
+                    <td>{{examen.concepto}}</td>
+                    <td>{{examen.ponderacion}}</td>
+                  </tr>
+                </tbody>
+              </table>
+                <hr>
             </div>
         </div>
       </div>
   </div>
  </div>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
