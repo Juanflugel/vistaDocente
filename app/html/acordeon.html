@@ -2,7 +2,7 @@
   <!--  aqui comienza el repeater para los cada periodo en el scope periodos -->
   <div class="panel panel-default" ng-repeat="periodo in Periodos">
 
-     <div class="panel-heading" role="tab" id="headingOne" >
+     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
            <span class="titulo" data-toggle="collapse" data-target="#{{periodo.targetid}}" aria-expanded="{{periodo.expanded}}" aria-controls="{{periodo.targetid}}" data-parent="#accordion">
               {{periodo.periodo}}
@@ -10,66 +10,30 @@
           <span class="pull-right">
               <i class="fa fa-plus-square fa-lg" ng-click="toggleSidenav('right')"></i>        
           </span>
-      </h4>
-  </div>
+        </h4>
+     </div>
 
   <div id="{{periodo.targetid}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
         <!-- aqui se filtra cada logro de acuerdo con su periodo que es una propiedad del scope Logros y periodo.id que es una propidad del escope Periodos -->
         <div ng-repeat="x in Logros | filter:{periodo:periodo.id}">
+            <well-logros></well-logros>
 
-            <!-- tamaño grande de pantalla muestra de logros  -->
-            <p aling="justify" class="well well-sm logro hidden-xs" style="cursor:pointer;">
-                <span data-toggle="collapse" data-target="#{{x.id_indicador}}" aria-expanded="false">
-                    {{x.contenido}}&nbsp&nbsp&nbsp
-                    -<strong>{{x.fecha_vencimiento |date:format:timezone}}</strong>-
-                </span>
-                <span class="pull-right CRUD">
-                    <i class="fa fa-edit fa-lg" style="color:#00D63F;"></i>&nbsp&nbsp<i class="fa fa-close fa-lg" style="color:#E60013;"></i>
-                </span>
-            </p>
-            <!-- tamaño grande de pantalla muestra de logros  -->
+            <div class="collapse" id="{{x.id_indicador}}">
+              <hr>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+                    <span class="visible-lg visible-md visible-sm">Agregar Evaluacion</span>
+                    <span class="visible-xs">+ Evaluacion</span>
+                  </button>
+              <br> 
 
-            <!-- tamaño de pantalla extra small un responsive bueno -->
-            <div class="visible-xs-block">
-              <div class="row list-group smtable" style="cursor:pointer;">
-                <div class="col-md-2 list-group-item" style="background-color: #f5f5f5" data-toggle="collapse" data-target="#{{x.id_indicador}}" aria-expanded="false">
-                 {{x.contenido}}
-             </div>
-             <div class="col-md-2 list-group-item" >
-                -<strong>{{x.fecha_vencimiento |date:format:timezone}}</strong>-
-                <span class="pull-right CRUD">
-                    <i class="fa fa-edit fa-lg" style="color:#00D63F;"></i>&nbsp&nbsp<i class="fa fa-close fa-lg" style="color:#E60013;"></i>
-                </span>
+            <tabla-evaluaciones></tabla-evaluaciones>
+            <hr>
             </div>
-
-
-            </div>
-            </div>
-         <!-- tamaño de pantalla extra small un responsive bueno -->
-
-
-
-
-
-    <div class="collapse" id="{{x.id_indicador}}">
-      <hr>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
-        <span class="visible-lg visible-md visible-sm">Agregar Evaluacion</span>
-        <span class="visible-xs">+ Evaluacion</span>
-    </button>
-    <br> 
-
-<tabla-evaluaciones></tabla-evaluaciones>
-<hr>
-</div>
-</div>
-
-
-
-</div>
-</div>
-</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

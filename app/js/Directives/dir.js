@@ -97,4 +97,11 @@ angular.module('Dirapp',[])
 		templateUrl:'html/tablaEvaluaciones.html'
 	};
 
+})
+.directive('wellLogros', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/wellLogros.html'
+	};
+
 });
