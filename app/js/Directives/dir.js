@@ -23,7 +23,6 @@ angular.module('Dirapp',[])
 		controller:['$scope', function ($scope){
 			$scope.navTab =[
 			{Nombre:'Contenido',classe:'active',icon:'fa fa-list-alt fa-lg',state:'Contenido'},
-			{Nombre:'Evaluaciones',classe:'',icon:'fa fa-flask fa-lg',state:'Evaluaciones'},
 			{Nombre:'Foro ',classe:'',icon:'fa fa-comments-o fa-lg fa-fw',state:'Foro'},
 			{Nombre:'Estudiantes',classe:'',icon:'fa fa-users fa-lg fa-fw',state:'Estudiantes'},
 			{Nombre:'Trabajos',classe:'',icon:'fa fa-tasks fa-lg fa-fw',state:'Trabajos'}
@@ -70,4 +69,32 @@ angular.module('Dirapp',[])
   	link: link
 
   };
+})
+.directive('modalEvaluaciones', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/modalEvaluaciones.html'
+	};
+
+})
+.directive('modalEstudiantes', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/modalEstudiantes.html'
+	};
+
+})
+.directive('modalEliminar', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/modalEliminar.html'
+	};
+
+})
+.directive('tablaEvaluaciones', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/tablaEvaluaciones.html'
+	};
+
 });

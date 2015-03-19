@@ -22,6 +22,10 @@ a{
  label{
   margin-bottom: 2px;
  }
+.smtable{
+margin-left: 0px;
+margin-right: 0px;
+ }
 
 md-sidenav {
   width: 240px;

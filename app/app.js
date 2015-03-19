@@ -70,6 +70,10 @@ angular.module('CDapp',[
 		};
 	});
 
+  $scope.edit = function(examen){
+    $scope.nExamen = examen;
+  };
+
 	
 
 	
