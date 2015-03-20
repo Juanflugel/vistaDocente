@@ -77,10 +77,17 @@ angular.module('Dirapp',[])
 	};
 
 })
+.directive('modalVernotas', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/modalverNotas.html'
+	};
+
+})
 .directive('modalEstudiantes', function (){
 	return{
 		restrict: 'E',      
-		templateUrl:'html/modalEstudiantes.html'
+		templateUrl:'html/modalEstudiantesaddNota.html'
 	};
 
 })
@@ -98,10 +105,24 @@ angular.module('Dirapp',[])
 	};
 
 })
+.directive('tablaVernotas', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/tablaverNotas.html'
+	};
+
+})
 .directive('wellLogros', function (){
 	return{
 		restrict: 'E',      
 		templateUrl:'html/wellLogros.html'
+	};
+
+})
+.directive('tablaEstudiantesaddnotas', function (){
+	return{
+		restrict: 'E',      
+		templateUrl:'html/tablaEstudiantesaddNotas.html'
 	};
 
 });

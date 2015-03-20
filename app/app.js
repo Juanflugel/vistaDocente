@@ -70,6 +70,11 @@ angular.module('CDapp',[
 		};
 	});
 
+  $http.get('js/Json/estudiantes.json').success(function (data){
+    $scope.Estudiantes = data;
+    console.log($scope.Estudiantes);
+  });
+
   $scope.edit = function(examen){
     $scope.nExamen = examen;
   };
