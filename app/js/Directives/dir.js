@@ -32,6 +32,7 @@ angular.module('Dirapp',[])
 	};
 
 })
+
 .directive('iTable', function(){
 
 	function link(scope, element, attrs){
@@ -68,6 +69,19 @@ angular.module('Dirapp',[])
   	templateUrl: "html/iTable.html",
   	link: link
 
+  };
+})
+.directive('toggle', function(){
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs){
+      if (attrs.toggle=="tooltip"){
+        $(element).tooltip();
+      }
+      // if (attrs.toggle=="popover"){
+      //   $(element).popover();
+      // }
+    }
   };
 })
 .directive('modalEvaluaciones', function (){
@@ -125,17 +139,4 @@ angular.module('Dirapp',[])
 		templateUrl:'html/tablaEstudiantesaddNotas.html'
 	};
 
-})
-// .directive('toggle', function(){
-//   return {
-//     restrict: 'A',
-//     link: function(scope, element, attrs){
-//       if (attrs.toggle=="tooltip"){
-//         $(element).tooltip();
-//       }
-//       if (attrs.toggle=="popover"){
-//         $(element).popover();
-//       }
-//     }
-//   };
-// });
+});

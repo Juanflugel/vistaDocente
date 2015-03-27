@@ -26,9 +26,7 @@ angular.module('CDapp',[
   .state('Evaluaciones', {
   	url: "/Evaluaciones",
   	templateUrl: "html/Evaluaciones.html",
-      // controller: function($scope) {
-      //   $scope.items = ["A", "List", "Of", "Items"];
-      // }
+     
   })
   .state('Foro', {
   	url: "/Foro",
@@ -37,16 +35,12 @@ angular.module('CDapp',[
   .state('Estudiantes', {
   	url: "/Estudiantes",
   	templateUrl: "html/bform.html",
-        // controller: function($scope) {
-        //   $scope.things = ["A", "Set", "Of", "Things"];
-        // }
+       
     })
   .state('Trabajos', {
   	url: "/Trabajos",
   	templateUrl: "html/Contenido.html",
-        // controller: function($scope) {
-        //   $scope.things = ["A", "Set", "Of", "Things"];
-        // }
+       
     })
 })
 
@@ -56,7 +50,12 @@ angular.module('CDapp',[
 		$mdSidenav(menuId).toggle();
 	};
 
-	$scope.clases =[{curso:'10A', materia:'Matematicas'},{curso:'8B', materia:'Geometria'},{curso:'7E', materia:'Matematicas'},{curso:'8F', materia:'Matematicas'}];
+	$scope.clases =[
+                  {curso:'10A', materia:'Matematicas'},
+                  {curso:'8B', materia:'Geometria'},
+                  {curso:'7E', materia:'Matematicas'},
+                  {curso:'8F', materia:'Matematicas'}
+                ];
 
 	
 	$http.get('js/Json/contenido.json').success(function (data){
@@ -64,10 +63,27 @@ angular.module('CDapp',[
     $scope.Evaluaciones = data.calificaciones;
     
 		console.log(data.calificaciones);
-		$scope.tabla = {
-			datos:data.calificaciones,
-			header:data.calificaciones[1]
-		};
+    var control = function(){
+      var e = $scope.Evaluaciones;
+      var tp =[];
+
+      for(i=0 ; i<e.length ; i++){
+        for( var key in e[i]){
+          if(key=="ponderacion"){
+            tp.push(e[i][key]);
+          }
+        }
+      }
+      console.log(tp);
+      var total = 0;
+      $.each(tp,function() {
+        total += this;
+      });
+      console.log(total);
+      $scope.total=total;
+    };
+    control();
+		
 	});
 
   $http.get('js/Json/estudiantes.json').success(function (data){
@@ -77,6 +93,10 @@ angular.module('CDapp',[
 
   $scope.edit = function(examen){
     $scope.nExamen = examen;
+  };
+
+  $scope.valor = function(key){
+    console.log(key);
   };
 
 	

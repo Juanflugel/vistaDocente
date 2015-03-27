@@ -26,10 +26,11 @@
                 </span>             
             </td>    
         </tr>
+        <tr><td></td><td><strong>total</strong></td><td>{{total}}</td><td></td></tr>
     </tbody>
 </table>
 
-
+<!-- solucion para el responsive de la tabla -->
 <div class="visible-xs-block">
    <br>
    <div class="row list-group smtable" ng-repeat="examen in Evaluaciones | filter:{id_indicador:x.id_indicador}">
