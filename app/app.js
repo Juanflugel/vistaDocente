@@ -99,6 +99,11 @@ angular.module('CDapp',[
     console.log(key);
   };
 
+  $scope.showLogro = function(Logro){
+    $scope.texto=Logro;
+    
+  };
+
 	
 
 	

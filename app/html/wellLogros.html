@@ -1,18 +1,31 @@
 <!-- tamaño grande de pantalla muestra de logros  -->
-<p aling="justify" class="well well-sm logro hidden-xs" style="cursor:pointer;">
-    <span data-toggle="collapse" data-target="#{{x.id_indicador}}" aria-expanded="false">
+<div class="container-fluid logro">
+
+  <div class="row well well-sm logro hidden-xs">
+    <div class=" col-md-11 logro" style="cursor:pointer;" data-toggle="collapse" data-target="#{{x.id_indicador}}" aria-expanded="false">
+      <p aling="justify" >
+
         {{x.contenido}}&nbsp&nbsp&nbsp
         -<strong>{{x.fecha_vencimiento |date:format:timezone}}</strong>-
-    </span>
-    <span class="pull-right CRUD">
-      <span  title="Edita aquí este Logro" data-toggle="tooltip" data-placement="top">
-        <i class="fa fa-edit fa-lg" style="color:#00D63F;"></i>
-      </span>&nbsp
-      <span title="Elimina aquí este Logro" data-toggle="tooltip"><i class="fa fa-close fa-lg" style="color:#E60013;"></i>
-      </span>
-    </span>
-    
-</p>
+      </p>
+    </div>
+
+  <div class="col-md-1 logro">
+     <span >
+        <span  title="Edita aquí este Logro" data-toggle="tooltip" data-placement="top">
+           <i class="fa fa-edit fa-lg" style="color:#00D63F;"></i>
+        </span>&nbsp
+        <span title="Elimina aquí este Logro" data-toggle="tooltip"><i class="fa fa-close fa-lg" style="color:#E60013;"></i>
+        </span>
+     </span>
+  </div>
+</div>
+
+
+
+
+
+
 <!-- tamaño grande de pantalla muestra de logros  -->
 
 <!-- tamaño de pantalla extra small un responsive bueno -->

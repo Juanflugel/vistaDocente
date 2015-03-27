@@ -4,7 +4,33 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Agrega aquí la nueva evaluación</h4>
+        <h4 class="modal-title" id="myModalLabel">Agrega aquí la nueva evaluación correspondiente al logro :</h4>
+        <h5>{{texto.contenido}}</h5>
+
+        se registran las siguientes evaluaciones para este logro
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Descripción</th><th>Tipo</th><th>Peso</th>    
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="examen in Evaluaciones | filter:{id_indicador:texto.id_indicador}">
+            <td>{{examen.concepto}}</td>
+            <td>{{examen.tipo_evaluacion}}</td>
+            <td>{{examen.ponderacion}}</td>
+             
+        </tr>
+
+        <tr><td></td><td><strong>total</strong></td><td>{{total}}</td></tr>
+    </tbody>
+</table>
+
+
+
+
+
       </div>
       <div class="modal-body">
         <form action="">
