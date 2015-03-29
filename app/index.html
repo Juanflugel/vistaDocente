@@ -14,8 +14,8 @@
     <!-- este es el sidenav left abierto por defecto -->
     <md-sidenav class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$media('gt-sm')" >
         <md-toolbar><div class="md-toolbar-tools"><span> Hola:Juan </span></div> </md-toolbar>
-        <md-content layout="column">	
-            <a ng-repeat="x in clases" class="Matbar2" >
+        <md-content layout="column">	<!-- aca de deine el parametro en la url con cada tab-->
+            <a ng-repeat="x in clases" class="Matbar2" ui-sref="Docente({idclase:x.state})">
                 <strong>{{x.curso}}</strong><br>
                 <small>{{x.materia}}</small>
             </a>
@@ -41,11 +41,12 @@
         </md-toolbar>
 
         <md-content layout="column" class="md-padding" flex>
-            <div>
+        <div flex ui-view></div>
+            <!-- <div>
                 <nav-tab></nav-tab>
             </div>
             <br>
-                <div flex ui-view></div>              
+                <div flex ui-view></div>  -->             
         </md-content>
 
     </md-content>

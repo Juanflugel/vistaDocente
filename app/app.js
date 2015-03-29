@@ -15,33 +15,43 @@ angular.module('CDapp',[
 .config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/Contenido");
+  $urlRouterProvider.otherwise("/Docente");
   //
   // Now set up the states
   $stateProvider
-  .state('Contenido', {
+// Rol de Doncente que cuenta con un parametro para cada clase
+  .state('Docente',{
+    url:"/Docente/:idclase",
+    templateUrl:"html/todo.html",
+    controller: function($stateParams){
+      console.log($stateParams);
+    }
+  })
+// estados anidaddos
+
+  .state('Docente.Contenido', {
   	url: "/Contenido",
   	templateUrl: "html/Contenido.html"
   })
-  .state('Evaluaciones', {
+  .state('Docente.Evaluaciones', {
   	url: "/Evaluaciones",
   	templateUrl: "html/Evaluaciones.html",
-     
+
   })
-  .state('Foro', {
+  .state('Docente.Foro', {
   	url: "/Foro",
   	templateUrl: "html/Contenido.html"
   })
-  .state('Estudiantes', {
+  .state('Docente.Estudiantes', {
   	url: "/Estudiantes",
   	templateUrl: "html/bform.html",
-       
-    })
-  .state('Trabajos', {
+
+  })
+  .state('Docente.Trabajos', {
   	url: "/Trabajos",
   	templateUrl: "html/Contenido.html",
-       
-    })
+
+  })
 })
 
 .controller('soloDatosCtrl',['$http','$scope','$mdSidenav','$timeout', '$mdBottomSheet','Datos', function ($http,$scope,$mdSidenav,$timeout,$mdBottomSheet,Datos){
@@ -51,18 +61,18 @@ angular.module('CDapp',[
 	};
 
 	$scope.clases =[
-                  {curso:'10A', materia:'Matematicas'},
-                  {curso:'8B', materia:'Geometria'},
-                  {curso:'7E', materia:'Matematicas'},
-                  {curso:'8F', materia:'Matematicas'}
-                ];
+  {curso:'10A', materia:'Matematicas',state:'10A'},
+  {curso:'8B', materia:'Geometria',state:'8B'},
+  {curso:'7E', materia:'Matematicas',state:'7E'},
+  {curso:'8F', materia:'Matematicas',state:'8F'}
+  ];
 
-	
-	$http.get('js/Json/contenido.json').success(function (data){
-		$scope.Logros = data.contenido;
+
+  $http.get('js/Json/contenido.json').success(function (data){
+    $scope.Logros = data.contenido;
     $scope.Evaluaciones = data.calificaciones;
     
-		console.log(data.calificaciones);
+    console.log(data.calificaciones);
     var control = function(){
       var e = $scope.Evaluaciones;
       var tp =[];
@@ -83,8 +93,8 @@ angular.module('CDapp',[
       $scope.total=total;
     };
     control();
-		
-	});
+
+  });
 
   $http.get('js/Json/estudiantes.json').success(function (data){
     $scope.Estudiantes = data;
@@ -104,7 +114,7 @@ angular.module('CDapp',[
     
   };
 
-	
 
-	
+
+
 }]);

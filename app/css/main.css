@@ -145,7 +145,8 @@ ul {
   box-shadow: 0px 0px 20px rgb(121, 191, 255);
 }
 .Matbar2:focus{
-  background-color:green !important;
+  background-color: rgb(0, 105, 175)!important;
+  box-shadow: 0px 0px 20px rgb(121, 191, 255);
   color:white;
 }
 h5{
