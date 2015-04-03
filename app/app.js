@@ -44,7 +44,8 @@ angular.module('CDapp',[
   })
   .state('Docente.Estudiantes', {
   	url: "/Estudiantes",
-  	templateUrl: "html/bform.html",
+  	templateUrl: "html/Estudiantes.html",
+    controller:"AppCtrl"
 
   })
   .state('Docente.Trabajos', {
@@ -54,7 +55,7 @@ angular.module('CDapp',[
   })
 })
 
-.controller('soloDatosCtrl',['$http','$scope','$mdSidenav','$timeout', '$mdBottomSheet','Datos', function ($http,$scope,$mdSidenav,$timeout,$mdBottomSheet,Datos){
+.controller('soloDatosCtrl',['$http','$scope','$mdSidenav','$timeout', '$mdBottomSheet', function ($http,$scope,$mdSidenav,$timeout,$mdBottomSheet){
 
 	$scope.toggleSidenav = function(menuId) {
 		$mdSidenav(menuId).toggle();
@@ -117,4 +118,44 @@ angular.module('CDapp',[
 
 
 
-}]);
+}])
+
+.controller('AppCtrl', function($scope) {
+    $scope.todos = [
+      {
+        face : 'http://lorempixel.com/50/50/people',
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : 'http://lorempixel.com/50/50/people',
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : 'http://lorempixel.com/50/50/people',
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : 'http://lorempixel.com/50/50/people',
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : 'http://lorempixel.com/50/50/people',
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+    ];
+});

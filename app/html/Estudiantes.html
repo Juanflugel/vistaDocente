@@ -1,0 +1,44 @@
+<!-- <md-list>
+    <md-subheader class="md-no-sticky">3 line item</md-subheader>
+      <md-item class="md-3-line" ng-repeat="item in todos">
+        		<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+        		<div class="md-item-text">
+          			<h3>{{ item.who }}</h3>
+          			<h4>{{ item.what }}</h4>
+          			<p>{{ item.notes }}</p>
+        		</div>
+      </md-item>      
+</md-list> -->
+
+<md-list>
+  <md-item ng-repeat="item in todos">
+    <md-item-content>
+      <div class="md-tile-left">
+        <img ng-src="{{item.face}}?{{$index}}" class="face" alt="{{item.who}}">
+      </div>
+      <div class="md-tile-content">
+        <h3>{{item.what}}</h3>
+        <h4>{{item.who}}</h4>
+      </div>
+
+<div class="md-tile-right">
+        
+        <!-- Grupo de botones para gestionar la toma de asistencias -->
+            <div class="btn-group">
+                <label ng-disabled="asist" class="btn btn-default btn-green" ng-class="{active: estudiante.asistencia == 'si'}">
+                    <input class="radio"  type="radio" ng-model="estudiante.asistencia"  value="si" >
+                    <i class="fa fa-check fa-lg"></i>
+                </label>
+
+                <label ng-disabled="asist" class="btn btn-default btn-red " ng-class="{active: estudiante.asistencia == 'no'}">
+                    <input class="radio" type="radio" ng-model="estudiante.asistencia" value="no" >
+                    <i class="fa fa-times fa-lg"></i>
+                </label>
+            </div> 
+        </div>
+
+
+    </md-item-content>
+     <md-divider ng-if="!$last"></md-divider>
+  </md-item>
+</md-list>
