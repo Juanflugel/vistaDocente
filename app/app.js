@@ -21,7 +21,7 @@ angular.module('CDapp',[
   $stateProvider
 // Rol de Doncente que cuenta con un parametro para cada clase
   .state('Docente',{
-    url:"/Docente/:idclase",
+    url:"/Docente/{idclase:[0-9a-fA-F]{1,25}}",
     templateUrl:"html/todo.html",
     controller: function($stateParams){
       console.log($stateParams);
