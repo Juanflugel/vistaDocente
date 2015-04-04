@@ -10,6 +10,12 @@
       </md-item>      
 </md-list> -->
 
+<md-switch flex="30" ng-model="asist" ng-click="asisToast()" aria-label="Switch 1" ng-true-value="false" ng-false-value="true">
+
+    Asistencia
+    <md-tooltip>Tomar Asistencia</md-tooltip>
+  </md-switch>
+
 <md-list>
   <md-item ng-repeat="item in todos">
     <md-item-content>

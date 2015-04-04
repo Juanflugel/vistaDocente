@@ -1,4 +1,6 @@
-
+.radio{
+  display : none  ;
+}
 .face {
   border-radius: 30px;
   border: 1px solid #ddd;
@@ -157,4 +159,19 @@ ul {
 }
 h5{
   margin-left: 4%;
+}
+
+.btn-green{
+    color: #333;
+}
+.btn-green.active{
+  color: #fff;
+  background-color: #47a447 !important;
+  border-color: #398439 !important;
+}
+
+.btn-red.active{
+  color: #fff;;
+  background-color: #d9534f !important;
+  border-color: #d43f3a !important;
 }
