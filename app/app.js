@@ -3,7 +3,8 @@ angular.module('CDapp',[
     'ngMessages',
     'Dirapp',
     'Servapp',
-    'ui.router'
+    'ui.router',
+    'ngResource'
     ])
 
 .config(function($mdThemingProvider) {
@@ -13,48 +14,6 @@ angular.module('CDapp',[
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-<<<<<<< HEAD
-  //
-  // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/Docente");
-  //
-  // Now set up the states
-  $stateProvider
-// Rol de Doncente que cuenta con un parametro para cada clase
-  .state('Docente',{
-    url:"/Docente/{idclase:[0-9a-fA-F]{1,25}}",
-    templateUrl:"html/todo.html",
-    controller: function($stateParams){
-      console.log($stateParams);
-    }
-  })
-// estados anidaddos
-
-  .state('Docente.Contenido', {
-  	url: "/Contenido",
-  	templateUrl: "html/Contenido.html"
-  })
-  .state('Docente.Evaluaciones', {
-  	url: "/Evaluaciones",
-  	templateUrl: "html/Evaluaciones.html",
-
-  })
-  .state('Docente.Foro', {
-  	url: "/Foro",
-  	templateUrl: "html/Contenido.html"
-  })
-  .state('Docente.Estudiantes', {
-  	url: "/Estudiantes",
-  	templateUrl: "html/Estudiantes.html",
-    controller:"AppCtrl"
-
-  })
-  .state('Docente.Trabajos', {
-  	url: "/Trabajos",
-  	templateUrl: "html/Contenido.html",
-
-  })
-=======
 
     // For any unmatched url, redirect to /state1
     $urlRouterProvider.otherwise("/Docente");
@@ -86,7 +45,8 @@ angular.module('CDapp',[
     })
     .state('Docente.Estudiantes', {
         url: "/Estudiantes",
-        templateUrl: "html/bform.html",
+        templateUrl: "html/Estudiantes.html",
+        controller:'AppCtrl'
 
     })
     .state('Docente.Trabajos', {
@@ -94,10 +54,12 @@ angular.module('CDapp',[
         templateUrl: "html/Contenido.html",
 
     })
->>>>>>> 36b12c8ccf360c21fb948e44ce7e79bef391fafc
+
 })
 
-.controller('soloDatosCtrl',['$http','$scope','$mdSidenav','$timeout', '$mdBottomSheet', function ($http,$scope,$mdSidenav,$timeout,$mdBottomSheet){
+.controller('soloDatosCtrl',['$http','$scope','$mdSidenav','$timeout', '$mdBottomSheet','$state', function ($http,$scope,$mdSidenav,$timeout,$mdBottomSheet,$state){
+
+    // $state.go('Docente.Estudiantes');
 
     $scope.toggleSidenav = function(menuId) {
         $mdSidenav(menuId).toggle();
@@ -145,19 +107,18 @@ angular.module('CDapp',[
     });
 
     $scope.edit = function(examen){
-        $scope.nExamen = examen;
+      $scope.nExamen = examen;
     };
 
     $scope.valor = function(key){
-        console.log(key);
+      console.log(key);
     };
 
     $scope.showLogro = function(Logro){
-        $scope.texto=Logro;
+      $scope.texto=Logro;
 
-<<<<<<< HEAD
+    };
 }])
-
 .controller('AppCtrl', function($scope) {
     $scope.todos = [
       {
@@ -197,7 +158,4 @@ angular.module('CDapp',[
       },
     ];
 });
-=======
-    };
-}]);
->>>>>>> 36b12c8ccf360c21fb948e44ce7e79bef391fafc
+
