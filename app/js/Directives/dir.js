@@ -22,10 +22,10 @@ angular.module('Dirapp',[])
 		templateUrl:'html/navtab.html',
 		controller:['$scope', function ($scope){
 			$scope.navTab =[
-			{Nombre:'Contenido',classe:'active',icon:'fa fa-list-alt fa-lg',state:'Docente.Contenido()'},
-			{Nombre:'Foro ',classe:'',icon:'fa fa-comments-o fa-lg fa-fw',state:'Docente.Foro()'},
-			{Nombre:'Estudiantes',classe:'',icon:'fa fa-users fa-lg fa-fw',state:'Docente.Estudiantes()'},
-			{Nombre:'Trabajos',classe:'',icon:'fa fa-tasks fa-lg fa-fw',state:'Docente.Trabajos()'}
+			{Nombre:'Contenido', icon:'fa fa-list-alt fa-lg',state:'Docente.Contenido()'},
+			{Nombre:'Foro ', icon:'fa fa-comments-o fa-lg fa-fw',state:'Docente.Foro()'},
+			{Nombre:'Estudiantes' ,icon:'fa fa-users fa-lg fa-fw',state:'Docente.Estudiantes()'},
+			{Nombre:'Trabajos', icon:'fa fa-tasks fa-lg fa-fw',state:'Docente.Trabajos()'}
 			];
 		}]
 
