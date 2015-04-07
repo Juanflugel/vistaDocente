@@ -75,11 +75,11 @@ angular.module('Dirapp',[])
   return {
     restrict: 'A',
     link: function(scope, element, attrs){
-      if (attrs.toggle=="tooltip"){
+      if (attrs.toggle == "tooltip"){
         $(element).tooltip();
       }
-      // if (attrs.toggle=="popover"){
-      //   $(element).popover();
+      // if (attrs.dismiss=="modal"){
+      //   $(element).modal();
       // }
     }
   };
