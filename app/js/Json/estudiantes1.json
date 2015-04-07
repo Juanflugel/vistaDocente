@@ -1,0 +1,52 @@
+[{  
+	"Nombres":"YEINER ARIEL",
+	"Apellidos":"GUTIERREZ OJITO",
+	"Edad":"13","Nacimiento":"25/08/1995",
+	"NumeroDoc":"1043875679",
+	"Gsangre":"O+",
+	"Direccion":"Cl 22 N 37c-20",
+	"Barrio":"LA GUARIDA DEL DIABLO",
+	"Acudiente":"HANS DE JES�S VEREDA",
+	"TelAcudiente":"3012320077",
+	"fotoUrl":"http://i.telegraph.co.uk/multimedia/archive/01980/student_1980481b.jpg"
+},
+{
+	"Nombres":"PEDRO LUIS",
+	"Apellidos":"DIAZ FONTALVO",
+	"Edad":"14",
+	"Nacimiento":"04/09/1995",
+	"NumeroDoc":"1140836860",
+	"Gsangre":"AB-",
+	"Direccion":"Cl 32 N 37c-53",
+	"Barrio":"CRISTO",
+	"Acudiente":"RONALDO DAVID AGUIRRE GUZMAN",
+	"TelAcudiente":"3644976",
+	"fotoUrl":"https://ethosfitness.files.wordpress.com/2010/05/female_student1.jpg?w=300&h=264"
+	},
+{ 
+	"Nombres":"JORGE ALFREDO",
+	"Apellidos":"MONTERO PARRA",
+	"Edad":"15",
+	"Nacimiento":"14/09/1995",
+	"NumeroDoc":"8772597",
+	"Gsangre":"O-",
+	"Direccion":"Cl 43 N 37c-17",
+	"Barrio":"NO TE PASES",
+	"Acudiente":"DALMIRO ENRIQUE PAJODELO CAVAS",
+	"TelAcudiente":"3000639",
+	"fotoUrl":"http://www.dailyteachingtools.com/images/StudentTesting.jpg"
+	},
+{
+	"Nombres":"RANDY RAY",
+	"Apellidos":"BARRANCO ARRIETA",
+	"Edad":"16",
+	"Nacimiento":"24/09/1995",
+	"NumeroDoc":"1143114837",
+	"Gsangre":"A+",
+	"Direccion":"Cl 35 N 37c-25",
+	"Barrio":"VILLA VERGA",
+	"Acudiente":"KEILER DALLAN MAQUIA PEAO",
+	"TelAcudiente":"3630556",
+	"fotoUrl":"http://www.saludymedicinas.com.mx/assets/img/Estudiantes-Vitaminas.jpg"
+	}
+	]

@@ -5,7 +5,9 @@
   border-radius: 30px;
   border: 1px solid #ddd;
   width: 60px;
-  margin: 6px; }
+  height: 60px;
+  margin: 6px; 
+}
 body{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -22,18 +24,18 @@ h4{
 a{
   text-decoration: none !important;
   cursor: pointer;
- }
- hr{
+}
+hr{
   margin-top: 2px;
   margin-bottom: 2px;
- }
- label{
+}
+label{
   margin-bottom: 2px;
- }
+}
 .smtable{
-margin-left: 0px;
-margin-right: 0px;
- }
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
 md-sidenav {
   width: 240px;
@@ -65,6 +67,23 @@ md-checkbox{
   height: 25px;
   width: 25px;
 }
+.site-logo {
+  z-index: 9;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  width: auto;
+  height: 56px;
+  padding: -5px 0px -5px 0px;
+  -webkit-transition: 400ms all ease;
+  -moz-transition: 400ms all ease;
+  -ms-transition: 400ms all ease;
+  -o-transition: 400ms all ease;
+  transition: 400ms all ease;
+}
+.site-logo:hover {
+  transform: rotate(20deg);
+}
 .md-button.md-default-theme.md-fab {
   margin:10px;
 }
@@ -81,7 +100,7 @@ md-checkbox{
 .panel-default >.panel-heading{
   background-color:rgb(0,150,136); 
   color:white;
- padding: 15px;
+  padding: 15px;
 }
 .well{
   margin-bottom: 4px;
@@ -140,9 +159,9 @@ ul {
   margin-left:4%;
   padding-top: 4%;
   padding-bottom: 4%;
- text-align: center;
+  text-align: center;
   color: #fff;
-/*  font-size: 1.5em;*/
+  /*  font-size: 1.5em;*/
   
   border-radius: 4px;
   transition:All 0.2s;
